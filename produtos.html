@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Peixes Frescos — Peixaria Rio Paraguai | Cáceres-MT</title>
+    <meta name="description" content="Catálogo completo da Peixaria Rio Paraguai. Pintado, Pacu, Tilápia, Filé de Pintado, Pacupeva, Piauçu e Ventrecha de Pacu frescos em Cáceres-MT.">
+    <meta name="keywords" content="catálogo peixes, peixe fresco Cáceres, pintado, pacu, tilápia, piauçu, pacupeva, ventrecha">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="produtos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header (idêntico ao index.html) -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Peixaria Rio Paraguai</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Início</a></li>
+                    <li><a href="produtos.html" class="nav-link active">Produtos</a></li>
+                    <li><a href="receitas/diferenca-peixe-rio-vs-tanque.html" class="nav-link">Blog</a></li>
+                    <li><a href="sobre-nos.html" class="nav-link">Sobre Nós</a></li>
+                    <li><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="nav-contact">
+                    <a href="https://wa.me/5565996320873" target="_blank" class="phone-btn">
+                        <i class="fas fa-phone"></i>
+                        (65) 99632-0873
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero do Catálogo -->
+    <section class="catalog-hero">
+        <h1>Nosso Catálogo de Peixes</h1>
+        <p>Peixes de rio e tanque selecionados com todo o cuidado do Pantanal.</p>
+    </section>
+
+    <!-- Filtros + Grid -->
+    <main class="container catalog-section">
+
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="todos">Todos</button>
+            <button class="filter-btn" data-filter="rio"><i class="fas fa-water"></i> Peixe de Rio</button>
+            <button class="filter-btn" data-filter="tanque"><i class="fas fa-fish"></i> Peixe de Tanque</button>
+        </div>
+
+        <div class="catalog-grid">
+
+            <!-- 1. Pintado — Rio -->
+            <article class="catalog-card" data-type="rio">
+                <div class="catalog-card__img">
+                    <span class="product-badge badge-rio">Rio</span>
+                    <img src="images/pintado.jpeg" alt="Pintado fresco do Rio Paraguai">
+                </div>
+                <div class="catalog-card__body">
+                    <h2 class="catalog-card__title">Pintado Fresco</h2>
+                    <p class="catalog-card__latin">Pseudoplatystoma corruscans</p>
+                    <p class="catalog-card__desc">O rei do Rio Paraguai. Carne firme, saborosa e com pouquíssimas espinhas. Ideal para caldos, assados e moquecas.</p>
+                    <div class="catalog-card__footer">
+                        <a href="produtos/pintado.html" class="catalog-card__link">Ver mais →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2. Pacu — Rio -->
+            <article class="catalog-card" data-type="rio">
+                <div class="catalog-card__img">
+                    <span class="product-badge badge-rio">Rio</span>
+                    <img src="images/pacu.jpeg" alt="Pacu inteiro fresco">
+                </div>
+                <div class="catalog-card__body">
+                    <h2 class="catalog-card__title">Pacu Inteiro</h2>
+                    <p class="catalog-card__latin">Piaractus mesopotamicus</p>
+                    <p class="catalog-card__desc">Sabor marcante e carne suculenta. Perfeito para assar na brasa com sal grosso ou fritar dourado.</p>
+                    <div class="catalog-card__footer">
+                        <a href="produtos/pacu.html" class="catalog-card__link">Ver mais →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3. Filé de Pintado — Rio -->
+            <article class="catalog-card" data-type="rio">
+                <div class="catalog-card__img">
+                    <span class="product-badge badge-rio">Rio</span>
+                    <img src="images/file-pintado.jpeg" alt="Filé de Pintado premium">
+                </div>
+                <div class="catalog-card__body">
+                    <h2 class="catalog-card__title">Filé de Pintado</h2>
+                    <p class="catalog-card__latin">Pseudoplatystoma corruscans</p>
+                    <p class="catalog-card__desc">Corte premium sem espinhas, pronto para o preparo. Ideal para receitas grelhadas, empanadas ou ao molho.</p>
+                    <div class="catalog-card__footer">
+                        <a href="produtos/file-de-pintado.html" class="catalog-card__link">Ver mais →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 4. Pacupeva — Rio -->
+            <article class="catalog-card" data-type="rio">
+                <div class="catalog-card__img">
+                    <span class="product-badge badge-rio">Rio</span>
+                    <img src="images/pacupeva.jpeg" alt="Pacupeva do rio fresco">
+                </div>
+                <div class="catalog-card__body">
+                    <h2 class="catalog-card__title">Pacupeva do Rio</h2>
+                    <p class="catalog-card__latin">Metynnis spp.</p>
+                    <p class="catalog-card__desc">Primo menor do Pacu, com carne delicada e saborosa. Excelente frito com limão e sal grosso.</p>
+                    <div class="catalog-card__footer">
+                        <a href="produtos/pacupeva.html" class="catalog-card__link">Ver mais →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 5. Piauçu — Rio -->
+            <article class="catalog-card" data-type="rio">
+                <div class="catalog-card__img">
+                    <span class="product-badge badge-rio">Rio</span>
+                    <img src="images/piaucu.jpeg" alt="Piauçu do Rio Paraguai">
+                </div>
+                <div class="catalog-card__body">
+                    <h2 class="catalog-card__title">Piauçu</h2>
+                    <p class="catalog-card__latin">Leporinus macrocephalus</p>
+                    <p class="catalog-card__desc">Peixe típico da bacia do Paraguai. Carne macia e sabor suave, ótimo assado ou ensopado.</p>
+                    <div class="catalog-card__footer">
+                        <a href="produtos/piaucu.html" class="catalog-card__link">Ver mais →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 6. Ventrecha de Pacu — Rio -->
+            <article class="catalog-card" data-type="rio">
+                <div class="catalog-card__img">
+                    <span class="product-badge badge-rio">Rio</span>
+                    <img src="images/ventrecha-pacu.jpeg" alt="Ventrecha de Pacu do rio">
+                </div>
+                <div class="catalog-card__body">
+                    <h2 class="catalog-card__title">Ventrecha de Pacu</h2>
+                    <p class="catalog-card__latin">Piaractus mesopotamicus</p>
+                    <p class="catalog-card__desc">A parte mais suculenta do Pacu. Rica em gordura natural, derrete na boca quando assada na churrasqueira.</p>
+                    <div class="catalog-card__footer">
+                        <a href="produtos/ventrecha-de-pacu.html" class="catalog-card__link">Ver mais →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 7. Tilápia — Tanque -->
+            <article class="catalog-card" data-type="tanque">
+                <div class="catalog-card__img">
+                    <span class="product-badge badge-tanque">Tanque</span>
+                    <img src="images/tilapia.jpeg" alt="Tilápia fresca de tanque">
+                </div>
+                <div class="catalog-card__body">
+                    <h2 class="catalog-card__title">Tilápia</h2>
+                    <p class="catalog-card__latin">Oreochromis niloticus</p>
+                    <p class="catalog-card__desc">Criada em tanque sustentável. Sabor suave e versátil, ideal para filés empanados, caldos e moquecas leves.</p>
+                    <div class="catalog-card__footer">
+                        <a href="produtos/tilapia.html" class="catalog-card__link">Ver mais →</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Footer (idêntico ao index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Peixaria Rio Paraguai</h3>
+                    <p>Tradição e qualidade há mais de 20 anos.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/g/172iu7sCoX/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/peixaria_rio_paraguai" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5565996320873" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p><i class="fab fa-whatsapp"></i> (65) 99632-0873</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horário</h4>
+                    <p>Segunda a Sábado: 6h às 18h</p>
+                    <p>Domingo: na feira das 5h às 11h</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Endereço</h4>
+                    <p>Rua Bom Jardim, 96 - Centro</p>
+                    <p>Cáceres/MT - CEP: 78210-234</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Peixaria Rio Paraguai. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-de-privacidade.html">Política de Privacidade</a>
+                    <a href="termos-de-uso.html">Termos de Uso</a>
+                    <a href="receitas/diferenca-peixe-rio-vs-tanque.html">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5565996320873" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
+        <button class="cookie-accept" id="cookieAccept">Aceitar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

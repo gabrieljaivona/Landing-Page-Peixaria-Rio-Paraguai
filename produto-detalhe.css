@@ -1,0 +1,247 @@
+/* ============================================
+   PEIXARIA RIO PARAGUAI — produto-detalhe.css
+   Página de Detalhe do Produto
+   ============================================ */
+
+.detail-page {
+  padding-top: 88px;
+}
+
+/* Layout Duas Colunas */
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 2rem 0 3rem;
+  align-items: start;
+}
+
+/* Galeria Sticky */
+.product-gallery {
+  position: sticky;
+  top: 100px;
+}
+
+.gallery-main {
+  width: 100%;
+  height: 420px;
+  background: linear-gradient(135deg, #e0f0f5, #c6e2ea);
+  border-radius: var(--raio-borda);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-thumbs {
+  display: flex;
+  gap: 0.8rem;
+}
+.gallery-thumb {
+  width: 80px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color var(--transicao), opacity var(--transicao);
+  opacity: 0.6;
+}
+.gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-thumb:hover,
+.gallery-thumb.active {
+  border-color: var(--azul-nautico);
+  opacity: 1;
+}
+
+/* Informações do Produto */
+.product-info__badge {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: var(--azul-nautico);
+  margin-bottom: 0.8rem;
+}
+
+.product-info h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 0.4rem;
+}
+
+.product-info__latin {
+  font-style: italic;
+  color: #999;
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+.product-info__price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--vermelho-coral);
+  margin-bottom: 0.3rem;
+}
+.product-info__price small {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #999;
+}
+.product-info__price-note {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+/* Grid de Cortes */
+.cuts-section {
+  margin-bottom: 2rem;
+}
+.cuts-section h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: var(--cinza-texto);
+}
+
+.cuts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.cut-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1rem 0.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--raio-borda);
+  cursor: pointer;
+  transition: all var(--transicao);
+  background: #fff;
+  text-align: center;
+}
+.cut-option:hover {
+  border-color: var(--azul-agua-clara);
+}
+.cut-option.selected {
+  border-color: var(--azul-nautico);
+  background: rgba(0, 78, 100, 0.04);
+}
+
+.cut-option__icon { font-size: 1.6rem; }
+.cut-option__name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--azul-nautico);
+}
+.cut-option__desc {
+  font-size: 0.75rem;
+  color: #888;
+}
+.cut-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* CTA WhatsApp Gigante */
+.cta-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 1.2rem 2rem;
+  background: var(--vermelho-coral);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transicao);
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 24px rgba(229, 56, 59, 0.3);
+}
+.cta-whatsapp:hover {
+  background: #c1292e;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(229, 56, 59, 0.45);
+  color: #fff;
+}
+.cta-whatsapp i { font-size: 1.4rem; }
+
+.cta-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 2rem;
+}
+
+/* Features */
+.product-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+.feature-item {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+.feature-item__icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.feature-item__text strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--azul-nautico);
+}
+.feature-item__text span {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Artigo SEO */
+.product-article {
+  padding: 3rem 0 4rem;
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+}
+.product-article .rich-content {
+  padding: 0;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .product-detail {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .product-gallery { position: static; }
+  .gallery-main { height: 300px; }
+}
+
+@media (max-width: 480px) {
+  .product-features { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,190 @@
+/* ============================================
+   PEIXARIA RIO PARAGUAI — produtos.css
+   Estilos do Catálogo de Produtos
+   ============================================ */
+
+/* Hero do Catálogo */
+.catalog-hero {
+  padding-top: 120px;
+  padding-bottom: 3rem;
+  background: linear-gradient(165deg, var(--azul-nautico) 0%, #00364a 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.catalog-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80'%3E%3Cpath fill='%23fcfaf9' d='M0,48L80,42.7C160,37,320,27,480,32C640,37,800,59,960,58.7C1120,59,1280,37,1360,26.7L1440,16L1440,80L0,80Z'/%3E%3C/svg%3E") no-repeat bottom center;
+  background-size: cover;
+}
+.catalog-hero h1 {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+.catalog-hero p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Barra de Filtros */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.55rem 1.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--azul-agua-clara);
+  background: transparent;
+  color: var(--azul-nautico);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transicao);
+}
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--azul-nautico);
+  border-color: var(--azul-nautico);
+  color: #fff;
+}
+
+/* Grid do Catálogo */
+.catalog-section {
+  padding-bottom: 4rem;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Card do Catálogo */
+.catalog-card {
+  background: #fff;
+  border-radius: var(--raio-borda);
+  overflow: hidden;
+  box-shadow: var(--sombra-card);
+  transition: transform var(--transicao), box-shadow var(--transicao);
+  display: flex;
+  flex-direction: column;
+}
+.catalog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-elevada);
+}
+
+.catalog-card__img {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+.catalog-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: linear-gradient(135deg, #e0f0f5, #c6e2ea);
+}
+
+/* Badges — Rio / Tanque */
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  z-index: 2;
+}
+.badge-rio {
+  background: var(--azul-nautico);
+}
+.badge-tanque {
+  background: var(--verde-tanque);
+}
+
+.catalog-card__body {
+  padding: 1.3rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.catalog-card__title {
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+.catalog-card__latin {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+.catalog-card__desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+  flex: 1;
+  line-height: 1.6;
+}
+.catalog-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.catalog-card__price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--vermelho-coral);
+  margin: 0;
+}
+.catalog-card__price small {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #999;
+}
+
+.catalog-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.6rem 1.3rem;
+  border-radius: 50px;
+  background: var(--azul-nautico);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transicao);
+  white-space: nowrap;
+}
+.catalog-card__link:hover {
+  background: var(--vermelho-coral);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+}
