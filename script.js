@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navMenu.classList.toggle('active');
     });
 
-    // Fechar ao clicar num link
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Fechar ao clicar fora
     document.addEventListener('click', (e) => {
       if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
         hamburger.classList.remove('active');
@@ -54,6 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
      3. SELEÇÃO DE CORTES (Página de Detalhe)
      ----------------------------------------- */
   const cutOptions = document.querySelectorAll('.cut-option');
+  const mainGalleryImg = document.querySelector('.gallery-main img');
+  const galleryThumbs  = document.querySelectorAll('.gallery-thumb');
 
   cutOptions.forEach(option => {
     option.addEventListener('click', () => {
@@ -61,11 +61,39 @@ document.addEventListener('DOMContentLoaded', () => {
       option.classList.add('selected');
       const radio = option.querySelector('input[type="radio"]');
       if (radio) radio.checked = true;
+
+      const targetImage = option.dataset.image;
+      if (targetImage && mainGalleryImg) {
+        mainGalleryImg.src = targetImage;
+        galleryThumbs.forEach(thumb => {
+          const thumbImg = thumb.querySelector('img');
+          thumb.classList.toggle('active', thumbImg && thumbImg.getAttribute('src') === targetImage);
+        });
+      }
     });
   });
 
   /* -----------------------------------------
-     4. FILTROS DO CATÁLOGO
+     4. GALERIA DE IMAGENS (Página de Detalhe)
+     ----------------------------------------- */
+  document.querySelectorAll('.product-gallery').forEach(gallery => {
+    const mainImg = gallery.querySelector('.gallery-main img');
+    const thumbs  = gallery.querySelectorAll('.gallery-thumb');
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const thumbImg = thumb.querySelector('img');
+        mainImg.src = thumbImg.src;
+        mainImg.alt = thumbImg.alt;
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+    });
+  });
+
+  /* -----------------------------------------
+     5. FILTROS DO CATÁLOGO
+
      ----------------------------------------- */
   const filterBtns = document.querySelectorAll('.filter-btn');
 
