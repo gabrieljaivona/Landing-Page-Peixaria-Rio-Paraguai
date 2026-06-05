@@ -94,8 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
   /* -----------------------------------------
      5. FILTROS DO CATÁLOGO
 
+     Fluxo em duas etapas para transição suave:
+       1. Fade-out (opacity → 0) nos cards atualmente visíveis.
+       2. Após FADE_MS ms (mesmo valor da transition CSS), aplica display:none
+          nos cards que não batem com o filtro e restaura opacity nos demais.
+     O atributo data-category nos cards é comparado com data-filter dos botões.
+     O valor "all" exibe tudo.
      ----------------------------------------- */
   const filterBtns = document.querySelectorAll('.filter-btn');
+  const FADE_MS = 250;
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -105,13 +112,23 @@ document.addEventListener('DOMContentLoaded', () => {
       const filter = btn.dataset.filter;
       const cards  = document.querySelectorAll('.catalog-card');
 
+      // Etapa 1: fade-out dos cards atualmente visíveis
       cards.forEach(card => {
-        if (filter === 'todos') {
-          card.style.display = '';
-        } else {
-          card.style.display = (card.dataset.type === filter) ? '' : 'none';
+        if (card.style.display !== 'none') {
+          card.style.opacity   = '0';
+          card.style.transform = 'translateY(8px) scale(0.97)';
         }
       });
+
+      // Etapa 2: após o fade-out, redefine visibilidade e faz fade-in
+      setTimeout(() => {
+        cards.forEach(card => {
+          const match = filter === 'all' || card.dataset.category === filter;
+          card.style.display   = match ? '' : 'none';
+          card.style.opacity   = '';
+          card.style.transform = '';
+        });
+      }, FADE_MS);
     });
   });
 

@@ -1,0 +1,147 @@
+/* ============================================
+   PEIXARIA RIO PARAGUAI — blog.css
+   Estilos da Página Central do Blog
+   ============================================ */
+
+/* Hero do Blog */
+.blog-hero {
+  padding-top: 120px;
+  padding-bottom: 3rem;
+  background: linear-gradient(165deg, var(--azul-nautico) 0%, #00364a 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.blog-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80'%3E%3Cpath fill='%23fcfaf9' d='M0,48L80,42.7C160,37,320,27,480,32C640,37,800,59,960,58.7C1120,59,1280,37,1360,26.7L1440,16L1440,80L0,80Z'/%3E%3C/svg%3E") no-repeat bottom center;
+  background-size: cover;
+}
+.blog-hero h1 {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+.blog-hero p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Seção do Grid */
+.blog-section {
+  padding: 3rem 0 5rem;
+}
+
+/* Grid de Cards */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
+.blog-card {
+  background: #fff;
+  border-radius: var(--raio-borda);
+  overflow: hidden;
+  box-shadow: var(--sombra-card);
+  transition: transform var(--transicao), box-shadow var(--transicao);
+  display: flex;
+  flex-direction: column;
+}
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-elevada);
+}
+
+/* Imagem do Card */
+.blog-card__img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 210px;
+}
+.blog-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: linear-gradient(135deg, #e0f0f5, #c6e2ea);
+  transition: transform 0.4s ease;
+}
+.blog-card:hover .blog-card__img-wrap img {
+  transform: scale(1.04);
+}
+
+/* Tag de categoria */
+.blog-card__tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: var(--azul-nautico);
+  z-index: 2;
+}
+.blog-card__tag--receita  { background: var(--vermelho-coral); }
+.blog-card__tag--tutorial { background: #2a9d8f; }
+.blog-card__tag--saude    { background: #7b4f2e; }
+
+/* Corpo do Card */
+.blog-card__body {
+  padding: 1.4rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.blog-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--azul-nautico);
+  margin-bottom: 0.55rem;
+  line-height: 1.4;
+}
+.blog-card__excerpt {
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 1.2rem;
+}
+.blog-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.55rem 1.2rem;
+  border-radius: 50px;
+  background: var(--azul-nautico);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transicao);
+  align-self: flex-start;
+}
+.blog-card__link:hover {
+  background: var(--vermelho-coral);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}

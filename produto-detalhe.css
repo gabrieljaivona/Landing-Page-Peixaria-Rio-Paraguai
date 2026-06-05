@@ -74,6 +74,8 @@
   background: var(--azul-nautico);
   margin-bottom: 0.8rem;
 }
+.product-info__badge.badge-artesanal { background: #c47c00; }
+.product-info__badge.badge-caipira   { background: #7b4f2e; }
 
 .product-info h1 {
   font-size: clamp(1.8rem, 4vw, 2.6rem);

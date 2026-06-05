@@ -62,8 +62,32 @@
   color: #fff;
 }
 
+/* Aviso de Sazonalidade */
+.seasonality-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  background: #fff8e7;
+  border-left: 4px solid #c47c00;
+  border-radius: 0 var(--raio-borda) var(--raio-borda) 0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0 0.5rem;
+  color: #4d3200;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+.seasonality-notice i {
+  font-size: 1.15rem;
+  color: #c47c00;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+.seasonality-notice p {
+  margin: 0;
+}
+
 /* Grid do Catálogo */
-.catalog-section {
+.catalog-main {
   padding-bottom: 4rem;
 }
 
@@ -79,7 +103,7 @@
   border-radius: var(--raio-borda);
   overflow: hidden;
   box-shadow: var(--sombra-card);
-  transition: transform var(--transicao), box-shadow var(--transicao);
+  transition: transform var(--transicao), box-shadow var(--transicao), opacity 0.25s ease;
   display: flex;
   flex-direction: column;
 }
@@ -101,7 +125,7 @@
   background: linear-gradient(135deg, #e0f0f5, #c6e2ea);
 }
 
-/* Badges — Rio / Tanque */
+/* Badges — Rio / Tanque / Artesanal / Caipira */
 .product-badge {
   position: absolute;
   top: 12px;
@@ -120,6 +144,12 @@
 }
 .badge-tanque {
   background: var(--verde-tanque);
+}
+.badge-artesanal {
+  background: #c47c00;
+}
+.badge-caipira {
+  background: #7b4f2e;
 }
 
 .catalog-card__body {
@@ -181,6 +211,12 @@
   background: var(--vermelho-coral);
   color: #fff;
   transform: translateY(-2px);
+}
+.catalog-card__link--whatsapp {
+  background: #25a244;
+}
+.catalog-card__link--whatsapp:hover {
+  background: #1a7a33;
 }
 
 @media (max-width: 600px) {
