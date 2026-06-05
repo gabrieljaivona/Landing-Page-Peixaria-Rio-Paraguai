@@ -117,12 +117,12 @@
   width: 100%;
   height: 220px;
   overflow: hidden;
+  background-color: #f4f4f4;
 }
 .catalog-card__img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  background: linear-gradient(135deg, #e0f0f5, #c6e2ea);
+  object-fit: contain;
 }
 
 /* Badges — Rio / Tanque / Artesanal / Caipira */

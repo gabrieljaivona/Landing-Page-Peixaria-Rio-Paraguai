@@ -25,7 +25,7 @@
 .gallery-main {
   width: 100%;
   height: 420px;
-  background: linear-gradient(135deg, #e0f0f5, #c6e2ea);
+  background-color: #f4f4f4;
   border-radius: var(--raio-borda);
   overflow: hidden;
   margin-bottom: 1rem;
@@ -33,7 +33,7 @@
 .gallery-main img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .gallery-thumbs {
@@ -49,11 +49,12 @@
   cursor: pointer;
   transition: border-color var(--transicao), opacity var(--transicao);
   opacity: 0.6;
+  background-color: #f4f4f4;
 }
 .gallery-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .gallery-thumb:hover,
 .gallery-thumb.active {
