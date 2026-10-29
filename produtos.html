@@ -13,6 +13,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="script.js" defer></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3557846309993827" crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://peixariarioparaguai.com.br/produtos.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Peixaria Rio Paraguai">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Catálogo — Peixaria Rio Paraguai | Peixes, Queijo Artesanal e Carnes Caipiras em Cáceres-MT">
+    <meta property="og:description" content="Catálogo completo da Peixaria Rio Paraguai. Peixes frescos, queijo artesanal, doce de leite, rapadura, banha de porco e porco caipira em Cáceres-MT.">
+    <meta property="og:url" content="https://peixariarioparaguai.com.br/produtos.html">
+    <meta property="og:image" content="https://peixariarioparaguai.com.br/images/peixaria.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://peixariarioparaguai.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Catálogo",
+      "item": "https://peixariarioparaguai.com.br/produtos.html"
+    }
+  ]
+}
+    </script>
 </head>
 <body>
 
@@ -48,7 +77,8 @@
     <!-- Hero do Catálogo -->
     <section class="catalog-hero">
         <h1>Nosso Catálogo</h1>
-        <p>Peixes frescos, produtos artesanais e carnes caipiras direto do Pantanal.</p>
+        <p>Pescados do Rio Paraguai e o Empório Pantaneiro: peixes frescos, carnes caipiras e produtos artesanais direto do Pantanal.</p>
+        <p style="margin-top:1rem;"><a href="#calculadora" class="btn-outline" style="color:#fff;border-color:#fff;">Calculadora de Churrasco e Almoço ↓</a></p>
     </section>
 
     <!-- Filtros + Grid -->
@@ -66,18 +96,23 @@
             <button class="filter-btn" data-filter="tanque"><i class="fas fa-fish"></i> Peixes de Tanque</button>
             <button class="filter-btn" data-filter="caipira"><i class="fas fa-drumstick-bite"></i> Carnes Caipiras</button>
             <button class="filter-btn" data-filter="artesanal"><i class="fas fa-cheese"></i> Artesanais</button>
+            <a class="filter-btn filter-btn--link" href="#calculadora"><i class="fas fa-calculator"></i> Calculadora</a>
         </div>
 
-        <div class="catalog-grid">
+        <section class="catalog-section" id="pescados" data-section="peixes">
+            <div class="catalog-section__head">
+                <h2 class="catalog-section__title"><i class="fas fa-fish"></i> Pescados do Rio Paraguai</h2>
+                <p class="catalog-section__intro">Pintado, pacu, piauçu, piranha e outras espécies de couro e de escama do Rio Paraguai, além de peixes de tanque sustentável como a tilápia e a tambatinga. Fresco, limpo e cortado na hora na nossa loja em Cáceres-MT.</p>
+            </div>
+            <div class="catalog-grid">
 
-            <!-- 1. Pintado Fresco — Rio -->
             <article class="catalog-card" data-category="rio">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-rio">Rio</span>
                     <img src="images/peixes/pintado.webp" alt="Pintado fresco do Rio Paraguai">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Pintado Fresco</h2>
+                    <h3 class="catalog-card__title">Pintado Fresco</h3>
                     <p class="catalog-card__latin">Pseudoplatystoma corruscans</p>
                     <p class="catalog-card__desc">O rei do Rio Paraguai. Carne firme, saborosa e com pouquíssimas espinhas. Disponível inteiro, em postas ou em filé.</p>
                     <div class="catalog-card__footer">
@@ -86,14 +121,13 @@
                 </div>
             </article>
 
-            <!-- 2. Pacu Fresco — Rio -->
             <article class="catalog-card" data-category="rio">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-rio">Rio</span>
                     <img src="images/peixes/pacu.webp" alt="Pacu fresco inteiro do Rio Paraguai">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Pacu Fresco</h2>
+                    <h3 class="catalog-card__title">Pacu Fresco</h3>
                     <p class="catalog-card__latin">Piaractus mesopotamicus</p>
                     <p class="catalog-card__desc">Sabor marcante e carne suculenta. Disponível inteiro, retalhado ou em ventrecha — a parte mais gordurosa e apreciada.</p>
                     <div class="catalog-card__footer">
@@ -102,14 +136,13 @@
                 </div>
             </article>
 
-            <!-- 3. Pacupeva do Rio — Rio -->
             <article class="catalog-card" data-category="rio">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-rio">Rio</span>
                     <img src="images/peixes/pacupeva.webp" alt="Pacupeva do Rio Paraguai fresca">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Pacupeva do Rio</h2>
+                    <h3 class="catalog-card__title">Pacupeva do Rio</h3>
                     <p class="catalog-card__latin">Metynnis spp.</p>
                     <p class="catalog-card__desc">Primo menor do Pacu, com carne delicada e saborosa. Excelente frito inteiro com limão e sal grosso.</p>
                     <div class="catalog-card__footer">
@@ -118,14 +151,13 @@
                 </div>
             </article>
 
-            <!-- 4. Piauçu — Rio -->
             <article class="catalog-card" data-category="rio">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-rio">Rio</span>
                     <img src="images/peixes/piaucu.webp" alt="Piauçu do Rio Paraguai">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Piauçu</h2>
+                    <h3 class="catalog-card__title">Piauçu</h3>
                     <p class="catalog-card__latin">Leporinus macrocephalus</p>
                     <p class="catalog-card__desc">Peixe típico da bacia do Paraguai. Carne macia e sabor suave, ótimo assado inteiro ou em postas no ensopado.</p>
                     <div class="catalog-card__footer">
@@ -134,14 +166,13 @@
                 </div>
             </article>
 
-            <!-- 5. Piranha do Rio — Rio -->
             <article class="catalog-card" data-category="rio">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-rio">Rio</span>
                     <img src="images/peixes/piranha.webp" alt="Piranha fresca do Rio Paraguai">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Piranha do Rio</h2>
+                    <h3 class="catalog-card__title">Piranha do Rio</h3>
                     <p class="catalog-card__latin">Pygocentrus nattereri</p>
                     <p class="catalog-card__desc">Sabor forte e marcante, muito apreciada frita ou em caldo. Uma experiência gastronômica genuinamente pantaneira.</p>
                     <div class="catalog-card__footer">
@@ -150,14 +181,13 @@
                 </div>
             </article>
 
-            <!-- 6. Peixe Palmito — Rio -->
             <article class="catalog-card" data-category="rio">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-rio">Rio</span>
                     <img src="images/peixes/palmito.webp" alt="Peixe Palmito do Rio Paraguai">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Peixe Palmito</h2>
+                    <h3 class="catalog-card__title">Peixe Palmito</h3>
                     <p class="catalog-card__desc">Peixe de couro muito saboroso. Disponível inteiro ou em posta.</p>
                     <div class="catalog-card__footer">
                         <a href="produtos/palmito.html" class="catalog-card__link">Ver Cortes Disponíveis →</a>
@@ -165,14 +195,13 @@
                 </div>
             </article>
 
-            <!-- 7. Jurupensem — Rio -->
             <article class="catalog-card" data-category="rio">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-rio">Rio</span>
                     <img src="images/peixes/jurupensem.webp" alt="Jurupensem fresco do Rio Paraguai">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Jurupensem</h2>
+                    <h3 class="catalog-card__title">Jurupensem</h3>
                     <p class="catalog-card__desc">Peixe de couro saboroso, ideal para ensopados. Disponível inteiro ou em postas.</p>
                     <div class="catalog-card__footer">
                         <a href="produtos/jurupensem.html" class="catalog-card__link">Ver Cortes Disponíveis →</a>
@@ -180,14 +209,13 @@
                 </div>
             </article>
 
-            <!-- 8. Jurupoca — Rio -->
             <article class="catalog-card" data-category="rio">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-rio">Rio</span>
                     <img src="images/peixes/jurupoca.webp" alt="Jurupoca fresca do Rio Paraguai">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Jurupoca</h2>
+                    <h3 class="catalog-card__title">Jurupoca</h3>
                     <p class="catalog-card__desc">Carne macia e sem espinhas. Disponível inteira ou em postas.</p>
                     <div class="catalog-card__footer">
                         <a href="produtos/jurupoca.html" class="catalog-card__link">Ver Cortes Disponíveis →</a>
@@ -195,14 +223,13 @@
                 </div>
             </article>
 
-            <!-- 9. Bagre — Rio -->
             <article class="catalog-card" data-category="rio">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-rio">Rio</span>
                     <img src="images/peixes/bagre.webp" alt="Bagre fresco do Rio Paraguai">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Bagre</h2>
+                    <h3 class="catalog-card__title">Bagre</h3>
                     <p class="catalog-card__desc">Peixe de couro tradicional, excelente para caldos e ensopados pantaneiros. Vendido inteiro.</p>
                     <div class="catalog-card__footer">
                         <a href="produtos/bagre.html" class="catalog-card__link">Ver Detalhes →</a>
@@ -210,14 +237,13 @@
                 </div>
             </article>
 
-            <!-- 6. Tilápia Fresca — Tanque -->
             <article class="catalog-card" data-category="tanque">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-tanque">Tanque</span>
                     <img src="images/peixes/tilapia-file.webp" alt="Tilápia fresca de tanque sustentável">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Tilápia Fresca</h2>
+                    <h3 class="catalog-card__title">Tilápia Fresca</h3>
                     <p class="catalog-card__latin">Oreochromis niloticus</p>
                     <p class="catalog-card__desc">Criada em tanque sustentável. Sabor suave e versátil, disponível inteira ou em filé sem espinhas — ideal para toda a família.</p>
                     <div class="catalog-card__footer">
@@ -226,14 +252,13 @@
                 </div>
             </article>
 
-            <!-- Tambatinga — Tanque -->
             <article class="catalog-card" data-category="tanque">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-tanque">Tanque</span>
                     <img src="images/peixes/tambatinga.webp" alt="Tambatinga fresca de criação em tanque">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Tambatinga</h2>
+                    <h3 class="catalog-card__title">Tambatinga</h3>
                     <p class="catalog-card__desc">Excelente rendimento. Diversos cortes disponíveis, incluindo ventrecha e salgado.</p>
                     <div class="catalog-card__footer">
                         <a href="produtos/tambatinga.html" class="catalog-card__link">Ver Cortes Disponíveis →</a>
@@ -241,14 +266,23 @@
                 </div>
             </article>
 
-            <!-- 7. Porco Caipira — Caipira -->
+            </div>
+        </section>
+
+        <section class="catalog-section" id="emporio" data-section="emporio">
+            <div class="catalog-section__head">
+                <h2 class="catalog-section__title"><i class="fas fa-store"></i> Empório Pantaneiro</h2>
+                <p class="catalog-section__intro">Porco e frango caipiras, linguiça caseira, banha, carne seca, queijo, melado, rapadura, doces e conservas: os sabores da roça pantaneira que acompanham o peixe e vão à mesa em qualquer refeição de família.</p>
+            </div>
+            <div class="catalog-grid">
+
             <article class="catalog-card" data-category="caipira">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-caipira">Caipira</span>
                     <img src="images/caipira/porco-pernil.webp" alt="Porco caipira criado solto na roça">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Porco Caipira</h2>
+                    <h3 class="catalog-card__title">Porco Caipira</h3>
                     <p class="catalog-card__desc">Criado solto na roça com ração natural. Carne suculenta e saborosa em vários cortes: costela, pernil, suan e muito mais.</p>
                     <div class="catalog-card__footer">
                         <a href="produtos/porco.html" class="catalog-card__link">Ver Cortes Disponíveis →</a>
@@ -256,14 +290,13 @@
                 </div>
             </article>
 
-            <!-- 8. Frango Caipira e Semi-Caipira — Caipira -->
             <article class="catalog-card" data-category="caipira">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-caipira">Caipira</span>
                     <img src="images/caipira/frango-semi-caipira.webp" alt="Frango caipira criado solto">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Frango Caipira e Semi-Caipira</h2>
+                    <h3 class="catalog-card__title">Frango Caipira e Semi-Caipira</h3>
                     <p class="catalog-card__desc">Criado solto com ração caseira. Carne firme e saborosa, disponível inteiro ou picado, caipira ou semi-caipira.</p>
                     <div class="catalog-card__footer">
                         <a href="produtos/frango.html" class="catalog-card__link">Ver Tipos e Cortes →</a>
@@ -271,74 +304,13 @@
                 </div>
             </article>
 
-            <!-- 9. Banha de Porco — Caipira -->
-            <article class="catalog-card" data-category="caipira">
-                <div class="catalog-card__img">
-                    <span class="product-badge badge-caipira">Caipira</span>
-                    <img src="images/caipira/banha-de-porco.webp" alt="Banha de porco pura artesanal">
-                </div>
-                <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Banha de Porco</h2>
-                    <p class="catalog-card__desc">Pura e artesanal, perfeita para refogar, fritar e dar sabor às receitas de roça. A gordura que o campo conhece.</p>
-                    <div class="catalog-card__footer">
-                        <a href="produtos/banha.html" class="catalog-card__link">Ver Detalhes →</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- 10. Rapadura Artesanal — Artesanal -->
-            <article class="catalog-card" data-category="artesanal">
-                <div class="catalog-card__img">
-                    <span class="product-badge badge-artesanal">Artesanal</span>
-                    <img src="images/artesanal/rapaduras.webp" alt="Rapadura artesanal feita com cana-de-açúcar pura">
-                </div>
-                <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Rapadura Artesanal</h2>
-                    <p class="catalog-card__desc">Feita com caldo de cana puro, sem conservantes. Disponível nos sabores Cana Tradicional, Doce de Leite e Coco.</p>
-                    <div class="catalog-card__footer">
-                        <a href="produtos/rapadura.html" class="catalog-card__link">Ver Sabores Disponíveis →</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- 11. Queijo Artesanal — Artesanal -->
-            <article class="catalog-card" data-category="artesanal">
-                <div class="catalog-card__img">
-                    <span class="product-badge badge-artesanal">Artesanal</span>
-                    <img src="images/artesanal/queijo.webp" alt="Queijo artesanal produzido na fazenda com leite puro">
-                </div>
-                <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Queijo Artesanal</h2>
-                    <p class="catalog-card__desc">Produzido na fazenda com leite puro e processo artesanal. Sabor autêntico do campo, feito com tradição.</p>
-                    <div class="catalog-card__footer">
-                        <a href="produtos/queijo.html" class="catalog-card__link">Ver Detalhes →</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- 12. Doces Caseiros da Fazenda — Artesanal -->
-            <article class="catalog-card" data-category="artesanal">
-                <div class="catalog-card__img">
-                    <span class="product-badge badge-artesanal">Artesanal</span>
-                    <img src="images/artesanal/doce-de-leite.webp" alt="Doces caseiros artesanais da fazenda">
-                </div>
-                <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Doces Caseiros da Fazenda</h2>
-                    <p class="catalog-card__desc">O autêntico sabor da roça. Escolha entre o tradicional doce de leite cremoso, com coco, em tablete ou o famoso Doce Cachorrada pantaneiro.</p>
-                    <div class="catalog-card__footer">
-                        <a href="produtos/doces.html" class="catalog-card__link">Ver Variações →</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- 13. Linguiça de Porco Caseira — Caipira -->
             <article class="catalog-card" data-category="caipira">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-caipira">Caipira</span>
                     <img src="images/caipira/linguica-de-porco.webp" alt="Linguiça de porco caseira artesanal">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Linguiça de Porco Caseira</h2>
+                    <h3 class="catalog-card__title">Linguiça de Porco Caseira</h3>
                     <p class="catalog-card__desc">Produção própria, temperada na medida certa.</p>
                     <div class="catalog-card__footer">
                         <a href="produtos/linguica.html" class="catalog-card__link">Ver Variantes →</a>
@@ -346,14 +318,27 @@
                 </div>
             </article>
 
-            <!-- 14. Carne Seca Tradicional — Caipira -->
+            <article class="catalog-card" data-category="caipira">
+                <div class="catalog-card__img">
+                    <span class="product-badge badge-caipira">Caipira</span>
+                    <img src="images/caipira/banha-de-porco.webp" alt="Banha de porco pura artesanal">
+                </div>
+                <div class="catalog-card__body">
+                    <h3 class="catalog-card__title">Banha de Porco</h3>
+                    <p class="catalog-card__desc">Pura e artesanal, perfeita para refogar, fritar e dar sabor às receitas de roça. A gordura que o campo conhece.</p>
+                    <div class="catalog-card__footer">
+                        <a href="produtos/banha.html" class="catalog-card__link">Ver Detalhes →</a>
+                    </div>
+                </div>
+            </article>
+
             <article class="catalog-card" data-category="caipira">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-caipira">Caipira</span>
                     <img src="images/caipira/carne-seca.webp" alt="Carne seca tradicional curada ao sol">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Carne Seca Tradicional</h2>
+                    <h3 class="catalog-card__title">Carne Seca Tradicional</h3>
                     <p class="catalog-card__desc">Curada ao sol, perfeita para o arroz carreteiro.</p>
                     <div class="catalog-card__footer">
                         <a href="produtos/carne-seca.html" class="catalog-card__link">Ver Detalhes →</a>
@@ -361,44 +346,41 @@
                 </div>
             </article>
 
-            <!-- 15. Pimentas Caseiras — Artesanal -->
             <article class="catalog-card" data-category="artesanal">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-artesanal">Artesanal</span>
-                    <img src="images/artesanal/pimentas.webp" alt="Pimentas caseiras em conserva artesanal">
+                    <img src="images/artesanal/queijo.webp" alt="Queijo artesanal produzido na fazenda com leite puro">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Pimentas Caseiras</h2>
-                    <p class="catalog-card__desc">Conservas artesanais.</p>
+                    <h3 class="catalog-card__title">Queijo Artesanal</h3>
+                    <p class="catalog-card__desc">Produzido na fazenda com leite puro e processo artesanal. Sabor autêntico do campo, feito com tradição.</p>
                     <div class="catalog-card__footer">
-                        <a href="produtos/pimentas.html" class="catalog-card__link">Ver Conservas →</a>
+                        <a href="produtos/queijo.html" class="catalog-card__link">Ver Detalhes →</a>
                     </div>
                 </div>
             </article>
 
-            <!-- 16. Mandioca Descascada — Caipira -->
-            <article class="catalog-card" data-category="caipira">
+            <article class="catalog-card" data-category="artesanal">
                 <div class="catalog-card__img">
-                    <span class="product-badge badge-caipira">Caipira</span>
-                    <img src="images/caipira/madioca.webp" alt="Mandioca amarela descascada da roça">
+                    <span class="product-badge badge-artesanal">Artesanal</span>
+                    <img src="images/artesanal/rapaduras.webp" alt="Rapadura artesanal feita com cana-de-açúcar pura">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Mandioca Descascada</h2>
-                    <p class="catalog-card__desc">Mandioca amarela da roça, descascada e pronta para cozinhar. Macia, saborosa e o acompanhamento perfeito para o peixe frito.</p>
+                    <h3 class="catalog-card__title">Rapadura Artesanal</h3>
+                    <p class="catalog-card__desc">Feita com caldo de cana puro, sem conservantes. Disponível nos sabores Cana Tradicional, Doce de Leite e Coco.</p>
                     <div class="catalog-card__footer">
-                        <a href="produtos/mandioca.html" class="catalog-card__link">Ver Detalhes →</a>
+                        <a href="produtos/rapadura.html" class="catalog-card__link">Ver Sabores Disponíveis →</a>
                     </div>
                 </div>
             </article>
 
-            <!-- 17. Melado de Cana — Artesanal -->
             <article class="catalog-card" data-category="artesanal">
                 <div class="catalog-card__img">
                     <span class="product-badge badge-artesanal">Artesanal</span>
                     <img src="images/artesanal/melado-de-cana.webp" alt="Melado de cana puro de engenho artesanal">
                 </div>
                 <div class="catalog-card__body">
-                    <h2 class="catalog-card__title">Melado de Cana</h2>
+                    <h3 class="catalog-card__title">Melado de Cana</h3>
                     <p class="catalog-card__desc">Produzido em engenho tradicional, 100% puro e natural. Sem conservantes, com o sabor autêntico da cana colhida na hora.</p>
                     <div class="catalog-card__footer">
                         <a href="produtos/melado.html" class="catalog-card__link">Ver Detalhes →</a>
@@ -406,7 +388,84 @@
                 </div>
             </article>
 
-        </div>
+            <article class="catalog-card" data-category="artesanal">
+                <div class="catalog-card__img">
+                    <span class="product-badge badge-artesanal">Artesanal</span>
+                    <img src="images/artesanal/doce-de-leite.webp" alt="Doces caseiros artesanais da fazenda">
+                </div>
+                <div class="catalog-card__body">
+                    <h3 class="catalog-card__title">Doces Caseiros da Fazenda</h3>
+                    <p class="catalog-card__desc">O autêntico sabor da roça. Escolha entre o tradicional doce de leite cremoso, com coco, em tablete ou o famoso Doce Cachorrada pantaneiro.</p>
+                    <div class="catalog-card__footer">
+                        <a href="produtos/doces.html" class="catalog-card__link">Ver Variações →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="catalog-card" data-category="artesanal">
+                <div class="catalog-card__img">
+                    <span class="product-badge badge-artesanal">Artesanal</span>
+                    <img src="images/artesanal/pimentas.webp" alt="Pimentas caseiras em conserva artesanal">
+                </div>
+                <div class="catalog-card__body">
+                    <h3 class="catalog-card__title">Pimentas Caseiras</h3>
+                    <p class="catalog-card__desc">Conservas artesanais.</p>
+                    <div class="catalog-card__footer">
+                        <a href="produtos/pimentas.html" class="catalog-card__link">Ver Conservas →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="catalog-card" data-category="caipira">
+                <div class="catalog-card__img">
+                    <span class="product-badge badge-caipira">Caipira</span>
+                    <img src="images/caipira/madioca.webp" alt="Mandioca amarela descascada da roça">
+                </div>
+                <div class="catalog-card__body">
+                    <h3 class="catalog-card__title">Mandioca Descascada</h3>
+                    <p class="catalog-card__desc">Mandioca amarela da roça, descascada e pronta para cozinhar. Macia, saborosa e o acompanhamento perfeito para o peixe frito.</p>
+                    <div class="catalog-card__footer">
+                        <a href="produtos/mandioca.html" class="catalog-card__link">Ver Detalhes →</a>
+                    </div>
+                </div>
+            </article>
+
+            </div>
+        </section>
+
+        <!-- Calculadora de Churrasco/Almoço -->
+        <section class="calc" id="calculadora" aria-labelledby="calc-title">
+            <h2 class="calc__title" id="calc-title"><i class="fas fa-calculator"></i> Calculadora de Churrasco e Almoço</h2>
+            <p class="calc__intro">Vai receber a família ou os amigos? Informe quantos adultos e crianças vão comer e escolha o tipo de carne. Calculamos a quantidade aproximada para você encomendar.</p>
+
+            <form class="calc__form" id="calcForm" novalidate>
+                <div class="calc__field">
+                    <label for="calcAdultos">Adultos</label>
+                    <input type="number" id="calcAdultos" name="adultos" min="0" max="500" step="1" inputmode="numeric" value="10">
+                </div>
+                <div class="calc__field">
+                    <label for="calcCriancas">Crianças (até 10 anos)</label>
+                    <input type="number" id="calcCriancas" name="criancas" min="0" max="500" step="1" inputmode="numeric" value="4">
+                </div>
+                <div class="calc__field calc__field--wide">
+                    <label for="calcTipo">Tipo de carne</label>
+                    <select id="calcTipo" name="tipo">
+                        <option value="peixe-osso">Peixe inteiro ou em postas (com osso e espinha)</option>
+                        <option value="peixe-file">Peixe em filé (sem espinhas)</option>
+                        <option value="porco-osso">Porco com osso (costela, suan)</option>
+                        <option value="porco-limpo">Porco sem osso (pernil, lombo)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary calc__btn">Calcular</button>
+            </form>
+
+            <div class="calc__result" id="calcResult" role="status" aria-live="polite" hidden>
+                <p class="calc__total"><strong id="calcKg">0</strong> kg</p>
+                <p class="calc__detail" id="calcDetail"></p>
+                <a class="btn-whatsapp btn calc__wa" id="calcWa" href="https://wa.me/5565996320873" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Encomendar pelo WhatsApp</a>
+            </div>
+            <p class="calc__note">Estimativa com base em uma refeição principal com acompanhamentos (arroz, mandioca, farofa, salada), já com uma pequena margem de segurança. Em eventos longos ou com muitas opções de carne, a quantidade por pessoa costuma ser menor; se a ideia for repetir o prato, aumente um pouco. Confirme a disponibilidade e o preço do dia pelo WhatsApp.</p>
+        </section>
     </main>
 
     <!-- Footer (idêntico ao index.html) -->
@@ -440,6 +499,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Peixaria Rio Paraguai. Todos os direitos reservados.</p>
+                <p class="footer-company">Peixaria Rio Paraguai · CNPJ 24.681.011/0001-42 · Proprietária: Glauciene Aparecida Jaivona</p>
                 <div class="footer-legal">
                     <a href="politica-de-privacidade.html">Política de Privacidade</a>
                     <a href="termos-de-uso.html">Termos de Uso</a>

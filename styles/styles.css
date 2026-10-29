@@ -838,3 +838,44 @@ ul { list-style: none; }
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ============================================
+   DADOS DA EMPRESA (rodapé) E ASSINATURA DE POSTS
+   ============================================ */
+.footer-company {
+  flex-basis: 100%;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.post-meta {
+  font-size: 0.92rem;
+  color: #6b7a80;
+  margin-bottom: 1.2rem;
+}
+.post-related {
+  margin-top: 2.5rem;
+  padding: 1.4rem 1.6rem;
+  background: #fff;
+  border-left: 4px solid var(--azul-nautico);
+  border-radius: 8px;
+  box-shadow: var(--sombra-card);
+}
+.post-related h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+.rich-content ol {
+  list-style: decimal;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.rich-content ol li {
+  margin-bottom: 0.5rem;
+  color: #444;
+  line-height: 1.7;
+}
+.rich-content h3 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}

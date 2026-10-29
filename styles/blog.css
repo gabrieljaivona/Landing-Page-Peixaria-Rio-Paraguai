@@ -145,3 +145,10 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Data e autoria nos cards */
+.blog-card__date {
+  font-size: 0.8rem;
+  color: #6b7a80;
+  margin: 0 0 0.8rem;
+}
