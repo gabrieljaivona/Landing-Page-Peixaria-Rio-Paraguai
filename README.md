@@ -75,7 +75,7 @@ Para personalizar o conteúdo:
 - Mantenha os mesmos nomes de arquivo ou atualize as referências no HTML
 
 #### Alterando Informações de Contato:
-- Edite os telefones, endereço e email no arquivo `index.html`
+- Edite o telefone (WhatsApp), o endereço e os dados da empresa no arquivo `index.html`
 - Atualize os links do WhatsApp com os números corretos
 
 ## Otimizações Incluídas

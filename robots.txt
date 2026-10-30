@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.peixariarioparaguai.com.br/sitemap.xml
+Sitemap: https://peixariarioparaguai.com.br/sitemap.xml

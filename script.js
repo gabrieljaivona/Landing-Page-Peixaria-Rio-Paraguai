@@ -128,8 +128,75 @@ document.addEventListener('DOMContentLoaded', () => {
           card.style.opacity   = '';
           card.style.transform = '';
         });
+
+        // Oculta o cabeçalho de seção (Pescados / Empório) quando todos os cards dela foram filtrados
+        document.querySelectorAll('.catalog-section').forEach(section => {
+          const visible = section.querySelectorAll('.catalog-card:not([style*="display: none"])');
+          section.style.display = visible.length ? '' : 'none';
+        });
       }, FADE_MS);
     });
   });
+
+  /* -----------------------------------------
+     6. CALCULADORA DE CHURRASCO / ALMOÇO (produtos.html)
+
+     Gramas por pessoa já incluem acompanhamentos e uma pequena margem.
+     Cortes com osso/espinha pedem mais peso por pessoa que cortes limpos.
+     Crianças comem metade da porção de um adulto.
+     O total é arredondado para cima em múltiplos de 0,5 kg.
+     ----------------------------------------- */
+  const calcForm = document.getElementById('calcForm');
+
+  if (calcForm) {
+    const GRAMAS_ADULTO = {
+      'peixe-osso':  500,
+      'peixe-file':  350,
+      'porco-osso':  500,
+      'porco-limpo': 350
+    };
+    const NOME_TIPO = {
+      'peixe-osso':  'peixe inteiro ou em postas',
+      'peixe-file':  'peixe em filé',
+      'porco-osso':  'porco com osso',
+      'porco-limpo': 'porco sem osso'
+    };
+    const fmtKg = kg => kg.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 1 });
+    const lerInt = el => Math.max(0, Math.min(500, parseInt(el.value, 10) || 0));
+
+    const result = document.getElementById('calcResult');
+    const kgEl   = document.getElementById('calcKg');
+    const detail = document.getElementById('calcDetail');
+    const wa     = document.getElementById('calcWa');
+
+    calcForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const adultos  = lerInt(calcForm.elements.adultos);
+      const criancas = lerInt(calcForm.elements.criancas);
+      const tipo     = calcForm.elements.tipo.value;
+
+      if (adultos + criancas === 0) {
+        result.hidden = false;
+        kgEl.textContent = '0';
+        detail.textContent = 'Informe pelo menos um adulto ou uma criança.';
+        wa.hidden = true;
+        return;
+      }
+
+      const gramas = adultos * GRAMAS_ADULTO[tipo] + criancas * (GRAMAS_ADULTO[tipo] / 2);
+      const kg = Math.ceil(gramas / 500) / 2;
+
+      kgEl.textContent = fmtKg(kg);
+      detail.textContent = `Para ${adultos} adulto(s) e ${criancas} criança(s), em ${NOME_TIPO[tipo]}. ` +
+        `Média de ${Math.round(gramas / (adultos + criancas))} g por pessoa.`;
+
+      const msg = `Olá! Usei a calculadora do site: preciso de cerca de ${fmtKg(kg)} kg de ${NOME_TIPO[tipo]} ` +
+        `para ${adultos} adulto(s) e ${criancas} criança(s). Podem me passar disponibilidade e valores?`;
+      wa.href = 'https://wa.me/5565996320873?text=' + encodeURIComponent(msg);
+      wa.hidden = false;
+      result.hidden = false;
+    });
+  }
 
 });
